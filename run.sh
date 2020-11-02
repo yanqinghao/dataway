@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 python tools/download_config_files.py
 
 cd dataway
