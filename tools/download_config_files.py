@@ -11,7 +11,8 @@ def getCleanArgs(argsDict):
 kwds = getCleanArgs(
     HasArguments.defaultArgumentsFormat(Context(**HasArguments.getArgsDictFromEnv()),
                                         storage.ARGUMENTS))
+storePath = getattr(Context(**HasArguments.getArgsDictFromEnv()), "configFile", None)
 storageType = kwds["type"]
 logger.info(f"Download Config File From {storageType}.")
 storage.setBackend(**kwds)
-storage.download("common/data/adult/data.csv", "data.csv")
+storage.download(storePath, "dataway/src/main/resources/application.properties")
