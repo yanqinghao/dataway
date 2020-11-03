@@ -12,10 +12,10 @@
 	<artifactId>dataway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dataway</name>
-	<description>Dataway project for Spring Boot</description>
+	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -34,12 +34,14 @@
 		<dependency>
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-spring</artifactId>
-			<version>4.1.7</version><!-- 查看最新版本：https://mvnrepository.com/artifact/net.hasor/hasor-spring -->
+			<version>4.2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-dataway</artifactId>
-			<version>4.1.7</version><!-- 查看最新版本：https://mvnrepository.com/artifact/net.hasor/hasor-dataway -->
+			<version>4.2.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/hasor-dataway-4.2.1.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
