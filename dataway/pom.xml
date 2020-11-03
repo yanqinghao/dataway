@@ -35,14 +35,36 @@
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-spring</artifactId>
 			<version>4.2.1</version>
+			<!-- <scope>system</scope>
+			<systemPath>${project.basedir}/libs/hasor-spring-4.2.2-SNAPSHOT.jar</systemPath> -->
 		</dependency>
 		<dependency>
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-dataway</artifactId>
 			<version>4.2.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/hasor-dataway-4.2.1.jar</systemPath>
+			<!-- <scope>system</scope>
+			<systemPath>${project.basedir}/libs/hasor-dataway-4.2.1.jar</systemPath> -->
 		</dependency>
+		<!-- <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-web</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-db</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-dataql</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-dataql-fx</artifactId>
+            <version>4.2.1</version>
+        </dependency> -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
