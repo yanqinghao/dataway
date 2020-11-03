@@ -12,15 +12,7 @@
 	<artifactId>dataway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dataway</name>
-	<description>Demo project for Spring Boot</description>
-
-	<repositories>
-		<repository>
-			<id>ali-maven</id>
-			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
-		</repository>
-	</repositories>
-
+	<description>Dataway project for Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>
