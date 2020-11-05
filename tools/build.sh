@@ -18,7 +18,7 @@ fi
 BUILDNAMES="suanpan-dataway"
 NAMESPACE="shuzhi-amd64"
 
-docker build --build-arg DOCKER_BASE=${DOCKERBASE} -t \
+docker build --pull --no-cache --build-arg DOCKER_BASE=${DOCKERBASE} -t \
     registry-vpc.cn-shanghai.aliyuncs.com/${NAMESPACE}/${BUILDNAMES}:${BUILD_VERSIONS} \
     -f docker/Dockerfile .
 docker push registry-vpc.cn-shanghai.aliyuncs.com/${NAMESPACE}/${BUILDNAMES}:${BUILD_VERSIONS}
