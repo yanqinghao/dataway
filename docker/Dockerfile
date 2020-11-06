@@ -29,7 +29,7 @@ WORKDIR /home/dataway
 
 COPY . /home/dataway
 
-RUN mkdir -p /root/.m2 && cp -f utils/settings.xml /root/.m2/ && chmod +x ./run.sh
+RUN chmod +x ./run.sh
 
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
 
