@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.spproject</groupId>
 	<artifactId>dataway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>dataway</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Dataway project for Spring Boot on Suanpan</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -35,36 +35,12 @@
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-spring</artifactId>
 			<version>4.2.1</version>
-			<!-- <scope>system</scope>
-			<systemPath>${project.basedir}/libs/hasor-spring-4.2.2-SNAPSHOT.jar</systemPath> -->
 		</dependency>
 		<dependency>
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-dataway</artifactId>
 			<version>4.2.1</version>
-			<!-- <scope>system</scope>
-			<systemPath>${project.basedir}/libs/hasor-dataway-4.2.1.jar</systemPath> -->
 		</dependency>
-		<!-- <dependency>
-            <groupId>net.hasor</groupId>
-            <artifactId>hasor-web</artifactId>
-            <version>4.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>net.hasor</groupId>
-            <artifactId>hasor-db</artifactId>
-            <version>4.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>net.hasor</groupId>
-            <artifactId>hasor-dataql</artifactId>
-            <version>4.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>net.hasor</groupId>
-            <artifactId>hasor-dataql-fx</artifactId>
-            <version>4.2.1</version>
-        </dependency> -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
