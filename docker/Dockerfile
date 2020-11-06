@@ -23,7 +23,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python
 
 RUN pip config set global.index-url ${PYPI_MIRROR}
 
-RUN pip install --upgrade pip && pip install suanpan
+RUN pip install --upgrade pip && pip install suanpan && cd /home/hasor && mvn clean install
 
 WORKDIR /home/dataway
 
