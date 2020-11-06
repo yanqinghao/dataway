@@ -31,6 +31,4 @@ COPY . /home/dataway
 
 RUN chmod +x ./run.sh
 
-ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-
-CMD ["mvn"]
+CMD ["bash"]
