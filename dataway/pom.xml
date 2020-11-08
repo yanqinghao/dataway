@@ -32,7 +32,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-spring</artifactId>
 			<version>4.2.1</version>
@@ -41,13 +41,6 @@
 			<groupId>net.hasor</groupId>
 			<artifactId>hasor-dataway</artifactId>
 			<version>4.2.1</version>
-		</dependency> -->
-		<dependency>
-			<groupId>net.hasor</groupId>
-			<artifactId>hasor-all</artifactId>
-			<version>4.2.1</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/hasor-all-4.2.1.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
@@ -87,32 +80,29 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- <configuration>
-					<mainClass>com.spproject.dataway.DatawayApplication</mainClass>
-				</configuration> -->
 			</plugin>
-			<!-- <plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<archive>
+                        <manifest>
+                            <mainClass>com.spproject.dataway.DatawayApplication</mainClass>
+                        </manifest>
+                    </archive>
+					<descriptorRefs>jar-with-dependencies</descriptorRefs>
+				</configuration>
 				<executions>
 					<execution>
+						<id>make-assembly</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>com.spproject.dataway.DatawayApplication</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-			</plugin> -->
+			</plugin>
 		</plugins>
 	</build>
 
