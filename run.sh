@@ -2,6 +2,4 @@
 
 python tools/download_config_files.py
 
-cd dataway
-
-mvn clean install org.springframework.boot:spring-boot-maven-plugin:run
+java -jar dataway-1.0.0.jar
