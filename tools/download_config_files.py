@@ -15,4 +15,4 @@ storePath = getattr(Context(**HasArguments.getArgsDictFromEnv()), "configFile", 
 storageType = kwds["type"]
 logger.info(f"Download Config File From {storageType} : {storePath}.")
 storage.setBackend(**kwds)
-storage.download(storePath, "dataway/src/main/resources/application.properties")
+storage.download(storePath, "config/application.properties")
