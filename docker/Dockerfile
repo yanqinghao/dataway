@@ -10,7 +10,7 @@ WORKDIR /home/dataway
 
 COPY . /home/dataway
 
-RUN mvn clean install package
+RUN cd dataway && mvn clean install package
 
 FROM openjdk:8
 
