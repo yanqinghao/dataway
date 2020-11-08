@@ -2,7 +2,17 @@ ARG DOCKER_BASE
 
 ARG TAG
 
-FROM ${DOCKER_BASE}:${TAG}
+FROM ${DOCKER_BASE}:${TAG} as builder
+
+RUN cd /home/hasor && mvn clean install
+
+WORKDIR /home/dataway
+
+COPY . /home/dataway
+
+RUN mvn clean install package
+
+FROM openjdk:8
 
 ARG PYTHON_VERSION=3.7
 
@@ -23,8 +33,10 @@ RUN pip install --upgrade pip && pip install suanpan && cd /home/hasor && mvn cl
 
 WORKDIR /home/dataway
 
-COPY . /home/dataway
+COPY --from=builder /home/dataway/run.sh /home/dataway/run.sh
 
-RUN chmod +x ./run.sh
+COPY --from=builder /home/dataway/dataway/target/dataway-1.0.0.jar /home/dataway/dataway-1.0.0.jar
+
+RUN chmod +x ./run.sh && mkdir -p config
 
 CMD ["bash"]
