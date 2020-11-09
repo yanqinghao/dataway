@@ -1,5 +1,5 @@
 #!/bin/bash
 
-python tools/download_config_files.py
+python download_config_files.py
 
 java -jar dataway-1.0.0.jar
